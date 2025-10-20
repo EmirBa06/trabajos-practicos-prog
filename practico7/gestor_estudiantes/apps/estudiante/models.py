@@ -10,15 +10,15 @@ class Curso(models.Model):
 
 class Estudiante(models.Model):
     nombre_estudiante = models.TextField(max_length=250, unique=True)
-    apellido_estduiante = models.TextField(max_length=250, unique=True)
-    edad_estdudiante = models.IntegerField(unique=True)
+    apellido_estudiante = models.TextField(max_length=250, unique=True)
+    edad_estudiante = models.IntegerField(unique=True)
     nota_curso_estudiante = models.IntegerField(blank=True, null=True)
     curso_estudiante = models.TextField(blank=True)
 
     cursos = models.ManyToManyField(Curso, related_name='estudiantes')
 
     def __str__(self):
-        return f'Nombre:{self.nombre_estudiante}, Apellido:{self.apellido_estduiante},Edad:{self.edad_estdudiante},Nota:{self.nota_curso_estudiante},Curso:{self.curso_estudiante}'
+        return f'Nombre: {self.nombre_estudiante}, Apellido: {self.apellido_estudiante}, Edad: {self.edad_estudiante}, Nota: {self.nota_curso_estudiante}, Curso: {self.curso_estudiante}'
 
 
 
