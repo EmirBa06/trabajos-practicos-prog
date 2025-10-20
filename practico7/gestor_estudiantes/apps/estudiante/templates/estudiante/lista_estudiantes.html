@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Estudiantes y sus cursos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Nota</th>
+                <th>Curso (texto)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ estudiante.nombre_estudiante }}</td>
+                <td>{{ estudiante.apellido_estudiante }}</td>
+                <td>{{ estudiante.edad_estudiante }}</td>
+                <td>{{ estudiante.nota_curso_estudiante }}</td>
+                <td>{{ estudiante.curso_estudiante }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
