@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Curso: {{ curso.nombre }}</h2>
+        <p><strong>ID:</strong> {{ curso.id }}</p>
+
+        <h3>Estudiantes inscriptos:</h3>
+        {% if estudiantes %}
+            <ul>
+                {% for estudiante in estudiantes %}
+                    <li>
+                        {{ estudiante.nombre_estudiante }} {{ estudiante.apellido_estudiante }} (Edad: {{ estudiante.edad_estudiante }})
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay estudiantes inscriptos en este curso.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
